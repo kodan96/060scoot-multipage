@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'variables';
+@import 'header';
+
+
+
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+}
+
+main,
+header,
+footer {
+    max-width: 1700px;
+    margin-inline: auto;
+}
+
+a {
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Space Mono';
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+}
+
+p {
+    font-size: .935rem;
+    line-height: 1.56;
+}
+
+.hero {
+    padding: 3.75rem 2rem;
+    background-image: url(../assets/images/about-hero-mobile.jpg);
+    margin-bottom: 4.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #fff;
+
+    }
+
+   
+}
+
+.digital-era {
+    
+    overflow: hidden;
+
+    .digital-era_section {
+        margin-bottom: 7.5rem;
+        padding-inline: 2rem;
+    }
+
+    img:not(.decoration) {
+        width: 82%;
+        max-width: 445px;
+        aspect-ratio: 1;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    
+
+    .digital-era_section--img {
+        position: relative;
+        margin-bottom: 3.5rem;
+        
+    }
+
+    .decoration {
+        position: absolute;
+
+        &.one {
+            bottom: 6rem;
+            left: 0;
+            transform: scale(2);
+            transform-origin: left center;
+        }
+
+        &.two {
+            top: 1.5rem;
+            right: 0;
+            transform: scale(1.5);
+            transform-origin: right center;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: $dark-navy;
+        letter-spacing: -1.43px;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        color: $dim-grey;
+    }
+}
+
+.values {
+    padding-inline: 2rem;
+    margin-bottom: 9.06rem;
+
+    h2 {
+        font-size: 2rem;
+        color: $dark-navy;
+        line-height: 1;
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $dark-navy;
+        margin-bottom: 1.75rem;
+    }
+
+    p {
+        color: $dim-grey;
+    }
+
+    .values_item {
+        margin-bottom: 3.5rem;
+    }
+
+    .values_item--img {
+        position: relative;
+        margin-bottom: 4rem;
+
+        .wrapper {
+            height: 96px;
+            width: 96px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $yellow;
+            position: absolute;
+            left: 50%;
+            bottom: -48px;
+            transform: translateX(-50%);
+
+            span {
+                font-size: 1.5rem;
+                line-height: 1.25;
+                font-weight: 800;
+                color: $dark-navy;
+                font-family: 'Space Mono';
+            }
+        }
+    }
+
+    img {
+        border-radius: 50%;
+    }
+
+
+}
+
+.faq {
+    padding-inline: 2rem;
+    margin-bottom: 7.5rem;
+
+    .faq_wrapper {
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: $dark-navy;
+        line-height: 1;
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $dark-navy;
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+        font-weight: 800;
+        line-height: 1.33;
+        color: $dark-navy;
+    }
+
+    .faq_item {
+        padding: 2rem;
+        text-align: start;
+        background-color: fade-out($color: $dim-grey, $amount: .9);
+        margin-bottom: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $light-yellow;
+        }
+
+        .faq_item--question {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+
+            img {
+                transition: transform .3s ease-in;
+            }
+        }
+
+        .faq_item--answer {
+            margin-top: 1.5rem;
+            display: none;
+
+            p {
+                color: $dark-navy;
+            }
+        }
+    }
+}
+
+.cta {
+    display: inline-block;
+    font-family: 'Space Mono';
+    font-size: .95rem;
+    line-height: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: $yellow;
+    font-weight: bold;
+    transition: all .3s ease-in;
+
+    &:hover {
+        outline: 2px solid $yellow;
+        color: $yellow;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .hero {
+        padding: 4.5rem 6.125rem;
+        text-align: start;
+        background-image: url(../assets/images/about-hero-tablet.jpg);
+        background-position: auto, center;
+
+        margin-bottom: 9rem;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+        
+    }
+
+    .digital-era {
+        padding-inline: 6.125rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+        .decoration {
+            &.one {
+                transform: scale(1.3);
+                bottom: 2rem;
+                left: 2rem;
+            }
+
+            &.two {
+                right: 50%;
+                transform: scale(1);
+            }
+
+            
+        }
+
+        .circle {
+            display: unset;
+            position: absolute;
+            right: -30rem;
+            z-index: -1;
+
+            &.left {
+                left: -30rem;
+                
+            }
+        }
+    }
+
+    .values {
+        padding-inline: 11rem;
+        margin-bottom: 7.5rem;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 6.56rem;
+        }
+
+        .values_item--img {
+            margin-bottom: 5.43rem;
+        }
+    }
+
+    .faq {
+        padding-inline: 2.5rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.75rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .hero {
+        padding: 4.5rem 10.31rem;
+        margin-bottom: 7.5rem;
+        background-image: url(../assets/images/about-hero-desktop.jpg);
+    }
+
+    .digital-era {
+        padding-inline: 10.31rem;
+
+        .digital-era_section {
+            display: flex;
+            padding-inline: 0;
+            gap: 13rem;
+            align-items: center;
+    
+            &:nth-of-type(1) .digital-era_section--img {
+                order: 1;
+            }
+
+            .digital-era_section--img {
+                flex: 1;
+                margin-bottom: 0;
+
+                .decoration {
+                    &.one {
+                        transform: scale(2);
+                        bottom: 4rem;
+                        left: -5rem;
+                    }
+                }
+            }
+
+            .digital-era_section--text {
+                flex: 1;
+                text-align: start;
+
+                h2 {
+                    margin-bottom: 1.5rem;
+                }
+
+                
+            }
+        }
+    }
+
+    .values_wrapper {
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    .faq {
+        padding-inline: 0;
+    }
+
+    .faq_wrapper {
+        display: flex;
+        padding-inline: 10.31rem;
+        gap: 8rem;
+
+
+        .faq_items {
+            flex: 1;
+
+        }
+        .faq_item {
+           width: 100%;
+           flex: 1;
+            
+        }
+    }
+}

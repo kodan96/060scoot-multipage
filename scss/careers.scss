@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'variables';
+@import 'header';
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+}
+
+main,
+header,
+footer {
+    max-width: 1700px;
+    margin-inline: auto;
+}
+
+a {
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Space Mono';
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+}
+
+p {
+    font-size: .935rem;
+    line-height: 1.56;
+}
+
+.hero {
+    padding: 3.75rem 2rem;
+    background-image: url(../assets/images/careers-location-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 4.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #fff;
+
+    }
+
+   
+}
+
+.mission {
+    margin-bottom: 7.5rem;
+
+    .mission_img {
+        position: relative;
+        margin-bottom: 3.5rem;
+        overflow: hidden;
+
+        .decoration {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            transform: scale(1.5);
+            transform-origin: left center;
+        }
+    }
+
+    .mission_text {
+        padding-inline: 2rem;
+        h2 {
+            font-size: 2rem;
+            color: $dark-navy;
+            margin-bottom: 2rem;
+            letter-spacing: -1.43px;
+            line-height: 1;
+        }
+
+        p {
+            color: $dim-grey;
+            margin-bottom: 2rem;
+        }
+    }
+
+    img:not(.decoration) {
+        width: 82%;
+        max-width: 445px;
+        border-radius: 50%;
+    }
+
+
+}
+
+.cta {
+    display: inline-block;
+    font-family: 'Space Mono';
+    font-size: .95rem;
+    line-height: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: $yellow;
+    font-weight: bold;
+    transition: all .3s ease-in;
+
+    &:hover {
+        outline: 2px solid $yellow;
+        color: $yellow;
+        background-color: transparent;
+    }
+}
+
+.values {
+    padding-inline: 2rem;
+    margin-bottom: 9.06rem;
+
+    img {
+        border-radius: 50%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: $dark-navy;
+        line-height: 1;
+        margin-bottom: 4rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $dark-navy;
+        margin-bottom: 1.75rem;
+    }
+
+    p {
+        color: $dim-grey;
+    }
+
+    .values_item {
+        margin-bottom: 3.5rem;
+    }
+
+    .values_item--img {
+        position: relative;
+        margin-bottom: 4rem;
+
+        .wrapper {
+            height: 96px;
+            width: 96px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $yellow;
+            position: absolute;
+            left: 50%;
+            bottom: -48px;
+            transform: translateX(-50%);
+
+            span {
+                font-size: 1.5rem;
+                line-height: 1.25;
+                font-weight: 800;
+                color: $dark-navy;
+                font-family: 'Space Mono';
+            }
+        }
+    }
+}
+
+.jobs {
+    padding-inline: 2rem;
+    margin-bottom: 7.5rem;
+
+    .job {
+        padding: 2rem;
+        background-color: fade-out($color: $dim-grey, $amount: .9);
+        margin-bottom: 1rem;
+
+        .cta {
+            width: 100%;
+        }
+    }
+
+    h3, p {
+        color: $dark-navy;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media screen and (min-width:750px) {
+    .hero {
+        padding: 4.5rem 6.125rem;
+        text-align: start;
+        background-image: url(../assets/images/careers-locations-hero-tablet.jpg);
+        background-position: auto, center;
+
+        margin-bottom: 9rem;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+        
+    }
+
+    .mission {
+        position: relative;
+        
+        
+
+        .mission_img .decoration {
+            transform: scale(1);
+            bottom: 0;
+            left: unset;
+            right: -2rem;
+        }
+
+        .mission_text {
+            padding-inline: 6.06rem;
+
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 2.5rem;
+            }
+
+            p {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .circle {
+            display: unset;
+            position: absolute;
+            top: 0;
+            right: -20rem;
+            z-index: -1;
+
+        }
+    }
+
+    .values {
+        padding-inline: 11rem;
+        margin-bottom: 7.5rem;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 6.56rem;
+        }
+
+        .values_item--img {
+            margin-bottom: 5.43rem;
+        }
+    }
+
+    .jobs {
+        padding-inline: 2.5rem;
+
+        .job {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+            align-items: center;
+            text-align: start;
+
+            .cta {
+                width: fit-content;
+                padding: 1rem 4.2rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero {
+        padding: 4.5rem 10.31rem;
+        margin-bottom: 7.5rem;
+        background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
+    }
+
+    .mission {
+        padding-inline: 10.31rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 7.5rem;
+        gap: 10rem;
+        overflow: visible;
+        
+
+        .mission_img {
+            order: 1;
+            flex: 1;
+           
+
+            .decoration {
+                left: 0;
+            }
+        }
+
+        .mission_text {
+            text-align: start;
+            flex: 1;
+            padding-inline: 0;
+
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .values_wrapper {
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    .jobs {
+        margin-bottom: 10rem;
+        padding-inline: 10.31rem;
+
+        .job {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

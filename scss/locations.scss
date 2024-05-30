@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'variables';
+@import 'header';
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+}
+
+main,
+header,
+footer {
+    max-width: 1700px;
+    margin-inline: auto;
+}
+
+a {
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Space Mono';
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+}
+
+p {
+    font-size: .935rem;
+    line-height: 1.56;
+}
+
+.hero {
+    padding: 3.75rem 2rem;
+    background-image: url(../assets/images/careers-location-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 4.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1;
+        color: #fff;
+
+    }
+
+   
+}
+
+.cta {
+    display: inline-block;
+    font-family: 'Space Mono';
+    font-size: .95rem;
+    line-height: 1.5rem;
+    padding: 1rem 2.5rem;
+    background-color: $yellow;
+    font-weight: bold;
+    transition: all .3s ease-in;
+
+    &:hover {
+        outline: 2px solid $yellow;
+        color: $yellow;
+        background-color: transparent;
+    }
+}
+
+.world_map {
+    padding-inline: 2rem;
+    margin-bottom: 4.5rem;
+
+    img {
+        margin-bottom: 2rem;
+    }
+
+}
+
+.wrapper {
+    padding-block: 2rem;
+    background-color: $light-yellow;
+    margin-bottom: 1rem;
+
+    span {
+        font-size: 1.5rem;
+        font-family: 'Space Mono';
+        color: $dark-navy;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+}
+
+.contact {
+    padding-inline: 2rem;
+    margin-bottom: 4.5rem;
+
+    h2 {
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: -1.43px;
+        color: $dark-navy;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        color: $dim-grey;
+        margin-bottom: 2rem;
+    }
+}
+

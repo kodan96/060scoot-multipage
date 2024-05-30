@@ -307,30 +307,19 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-family: "Space Mono", monospace;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -1.79px;
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-family: "Space Mono";
-  font-weight: bold;
-  letter-spacing: -0.89px;
-}
-
-p {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
+main,
+header,
+footer {
+  max-width: 1700px;
+  margin-inline: auto;
 }
 
 a {
   color: #fff;
-  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Space Mono";
 }
 
 ul {
@@ -338,27 +327,63 @@ ul {
 }
 
 img {
-  max-inline-size: 100vw;
+  max-inline-size: 100%;
+}
+
+p {
+  font-size: 0.935rem;
+  line-height: 1.56;
 }
 
 .hero {
-  position: relative;
-  padding: 7.18rem 2rem 11.18rem;
-  background-image: url(/assets/images/home-hero-mobile.jpg);
+  padding: 3.75rem 2rem;
+  background-image: url(../assets/images/careers-location-hero-mobile.jpg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  margin-bottom: 4.5rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.mission {
+  margin-bottom: 7.5rem;
+}
+.mission .mission_img {
+  position: relative;
+  margin-bottom: 3.5rem;
   overflow: hidden;
 }
-.hero .decoration {
+.mission .mission_img .decoration {
   position: absolute;
-  bottom: 2.1rem;
-  right: 65%;
-  height: 138px;
+  bottom: 2rem;
+  left: 2rem;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
-.hero p {
+.mission .mission_text {
+  padding-inline: 2rem;
+}
+.mission .mission_text h2 {
+  font-size: 2rem;
+  color: #495567;
   margin-bottom: 2rem;
-  color: #fff;
+  letter-spacing: -1.43px;
+  line-height: 1;
+}
+.mission .mission_text p {
+  color: #939CAA;
+  margin-bottom: 2rem;
+}
+.mission img:not(.decoration) {
+  width: 82%;
+  max-width: 445px;
+  border-radius: 50%;
 }
 
 .cta {
@@ -378,264 +403,213 @@ img {
   background-color: transparent;
 }
 
-.steps {
-  margin-block: 7.5rem;
-}
-.steps .steps_item {
+.values {
   padding-inline: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 9.06rem;
 }
-.steps h2 {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-  color: #495567;
-  margin-bottom: 1.5rem;
-}
-.steps p {
-  color: #939CAA;
-}
-.steps img {
-  aspect-ratio: 1;
-  height: 56px;
-  margin-bottom: 1.5rem;
-}
-
-.advantages {
-  overflow: hidden;
-}
-.advantages .advantage_section--img {
-  position: relative;
-  display: inline-block;
-}
-.advantages img:not(.decoration, .circle) {
-  aspect-ratio: 1;
-  width: 82%;
-  max-width: 445px;
-  height: auto;
-  margin-inline: auto;
+.values img {
   border-radius: 50%;
-  margin-bottom: 2.5rem;
 }
-.advantages h2 {
+.values h2 {
   font-size: 2rem;
-  font-weight: bold;
   color: #495567;
   line-height: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
-.advantages p {
+.values h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #495567;
+  margin-bottom: 1.75rem;
+}
+.values p {
   color: #939CAA;
-  margin-bottom: 2rem;
 }
-.advantages .advantage_section--text {
+.values .values_item {
+  margin-bottom: 3.5rem;
+}
+.values .values_item--img {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.values .values_item--img .wrapper {
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FCB72B;
+  position: absolute;
+  left: 50%;
+  bottom: -48px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.values .values_item--img .wrapper span {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #495567;
+  font-family: "Space Mono";
+}
+
+.jobs {
   padding-inline: 2rem;
   margin-bottom: 7.5rem;
 }
-.advantages .decoration.one {
-  position: absolute;
-  bottom: 20%;
-  left: 2rem;
+.jobs .job {
+  padding: 2rem;
+  background-color: rgba(147, 156, 170, 0.1);
+  margin-bottom: 1rem;
+}
+.jobs .job .cta {
   width: 100%;
-  height: auto;
-  -webkit-transform: scale(2);
-          transform: scale(2); /* Center the arrow and scale up */
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
 }
-.advantages .decoration.two {
-  position: absolute;
-  top: 0;
-  right: 8rem;
+.jobs h3, .jobs p {
+  color: #495567;
 }
-.advantages .decoration.three {
-  position: absolute;
-  top: 3rem;
-  left: 40%;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
+.jobs p {
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 750px) {
   .hero {
-    padding: 8.56rem 6rem 13.56rem;
-    background-image: url(../assets/images/home-hero-tablet.jpg);
+    padding: 4.5rem 6.125rem;
+    text-align: start;
+    background-image: url(../assets/images/careers-locations-hero-tablet.jpg);
+    background-position: auto, center;
+    margin-bottom: 9rem;
   }
   .hero h1 {
     font-size: 3.5rem;
   }
-  .hero .circles {
+  .mission {
+    position: relative;
+  }
+  .mission .mission_img .decoration {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: 0;
+    left: unset;
+    right: -2rem;
+  }
+  .mission .mission_text {
+    padding-inline: 6.06rem;
+  }
+  .mission .mission_text h2 {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  .mission .mission_text p {
+    margin-bottom: 2.5rem;
+  }
+  .mission .circle {
     display: unset;
     position: absolute;
-    bottom: 2.5rem;
-    right: -31px;
+    top: 0;
+    right: -20rem;
+    z-index: -1;
   }
-  .steps {
-    position: relative;
-    margin-bottom: 9.06rem;
+  .values {
+    padding-inline: 11rem;
+    margin-bottom: 7.5rem;
   }
-  .steps .steps_item {
+  .values h2 {
+    font-size: 3rem;
+    margin-bottom: 6.56rem;
+  }
+  .values .values_item--img {
+    margin-bottom: 5.43rem;
+  }
+  .jobs {
+    padding-inline: 2.5rem;
+  }
+  .jobs .job {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem 3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: start;
-    padding-inline: 6rem;
-    gap: 5rem;
   }
-  .steps .steps_item h2 {
-    font-size: 1.5rem;
+  .jobs .job .cta {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 4.2rem;
   }
-  .steps .steps_item img {
-    height: 96px;
+  .jobs .job p {
     margin-bottom: 0;
-  }
-  .line {
-    display: unset;
-    position: absolute;
-    width: 15px;
-    height: 110%;
-    background-color: rgba(147, 156, 170, 0.5);
-    top: -7.5rem;
-    left: 8.5rem;
-    z-index: -1;
-  }
-  .advantage_section--img img:not(.decoration, .circle) {
-    width: 445px;
-    margin-bottom: 3.5rem;
-  }
-  .advantage_section--img .decoration.one {
-    left: -6rem;
-  }
-  .advantage_section--img .decoration.two {
-    right: 16rem;
-  }
-  .advantages .advantage_section--text {
-    margin-bottom: 8rem;
-    padding-inline: 6.125rem;
-  }
-  .advantages .advantage_section--text h2 {
-    font-size: 3rem;
-    margin-inline: 5rem;
-    margin-bottom: 2.5rem;
-  }
-  .advantages .advantage_section--text p {
-    margin-bottom: 2.5rem;
-  }
-  .circle {
-    display: unset;
-    position: absolute;
-    right: -500px;
-    -webkit-transform: scale();
-            transform: scale();
-    bottom: 2.5rem;
-  }
-  .left {
-    right: unset;
-    left: -500px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 9.56rem 10.31rem;
-    text-align: start;
-    background-image: url(../assets/images/home-hero-desktop.jpg);
+    padding: 4.5rem 10.31rem;
+    margin-bottom: 7.5rem;
+    background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
   }
-  .hero h1 {
-    max-width: 15ch;
-  }
-  .hero p, .hero a {
-    margin-left: 5.93rem;
-    max-width: 45ch;
-  }
-  .hero .decoration {
-    bottom: 9.81rem;
-    left: 50%;
-  }
-  .hero .circles {
-    bottom: 10rem;
-  }
-  .hero .line_desktop {
-    display: unset;
-    position: absolute;
-    left: 0;
-    bottom: 17.6rem;
-  }
-  .steps {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .mission {
     padding-inline: 10.31rem;
-    gap: 2rem;
-    margin-block: 10rem 12.5rem;
-  }
-  .steps .steps_item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    padding-inline: 0;
-    gap: 2.5rem;
-  }
-  .steps .line {
-    height: 15px;
-    width: 65%;
-    top: 2.7rem;
-    left: 0;
-  }
-  .advantages {
-    margin-bottom: 3rem;
-  }
-  .advantages .advantage_section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-inline: 10.31rem;
-    text-align: start;
-    gap: 13rem;
-    margin-bottom: 10rem;
+    margin-bottom: 7.5rem;
+    gap: 10rem;
+    overflow: visible;
   }
-  .advantages .advantage_section .advantage_section--text {
-    padding: 0;
-    margin-bottom: 0;
-  }
-  .advantages .advantage_section .advantage_section--img img {
-    margin: 0;
-  }
-  .advantages .advantage_section h2 {
-    margin-inline: 0;
-    margin-bottom: 1.5rem;
-    max-width: 17ch;
-  }
-  .advantages .advantage_section p {
-    max-width: 48ch;
-  }
-  .advantages .advantage_section .cta {
-    padding: 0.875rem 2.75rem;
-  }
-  .advantages .advantage_section .decoration.one {
-    left: -4.81rem;
-  }
-  .advantages .advantage_section .decoration.three {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  .advantages .advantage_section .circle {
-    top: 0.2rem;
-  }
-  .advantages .advantage_section:nth-child(1) .advantage_section--img,
-  .advantages .advantage_section:nth-child(3) .advantage_section--img {
+  .mission .mission_img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .mission .mission_img .decoration {
+    left: 0;
+  }
+  .mission .mission_text {
+    text-align: start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-inline: 0;
+  }
+  .mission .mission_text h2 {
+    margin-bottom: 1.5rem;
+  }
+  .mission .mission_text p {
+    margin-bottom: 1.5rem;
+  }
+  .values_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.8rem;
+  }
+  .jobs {
+    margin-bottom: 10rem;
+    padding-inline: 10.31rem;
+  }
+  .jobs .job {
+    margin-bottom: 1.5rem;
+  }
+  .jobs .job h3 {
+    font-size: 1.5rem;
   }
 }
