@@ -402,3 +402,125 @@ p {
   color: #939CAA;
   margin-bottom: 2rem;
 }
+
+@media screen and (min-width: 750px) {
+  .hero {
+    padding: 4.5rem 10.31rem;
+    margin-bottom: 7.5rem;
+    background-image: url(../assets/images/careers-locations-hero-tablet.jpg);
+    text-align: start;
+  }
+  .world_map {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: auto;
+  }
+  .world_map .wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 2.5rem;
+    background-color: #FCB72B;
+    position: absolute;
+    z-index: 10;
+  }
+  .world_map .wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 5px;
+    border-top: 5px solid #FCB72B;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  .world_map .wrapper.ny {
+    top: 3rem;
+    left: 8rem;
+  }
+  .world_map .wrapper.yokohama {
+    top: 15%;
+    right: 3.7rem;
+  }
+  .world_map .wrapper.jakarta {
+    bottom: 42%;
+    right: 7.5rem;
+  }
+  .world_map .wrapper.london {
+    top: 6%;
+    left: 37%;
+  }
+  .world_map .wrapper span {
+    display: block;
+    font-size: 0.8125rem;
+  }
+  .contact {
+    padding-inline: 6.125rem;
+    margin-bottom: 7.5rem;
+  }
+  .contact h2 {
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -2.14px;
+    max-width: 15ch;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
+  .contact p {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 4.5rem 10.31rem;
+    margin-bottom: 7.5rem;
+    background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
+  }
+  .world_map .wrapper span {
+    font-size: 1.5rem;
+  }
+  .world_map .wrapper.ny {
+    top: 17%;
+    left: 15%;
+  }
+  .world_map .wrapper.london {
+    top: 7%;
+    left: 38%;
+  }
+  .world_map .wrapper.yokohama {
+    top: 20%;
+    right: 6rem;
+  }
+  .world_map .wrapper.jakarta {
+    bottom: 40%;
+    right: 11rem;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-inline: 10.31rem;
+  }
+  .contact .cta {
+    text-wrap: nowrap;
+  }
+  .contact h2 {
+    margin: 0;
+  }
+  .contact p {
+    max-width: 45ch;
+    margin: 0;
+  }
+}

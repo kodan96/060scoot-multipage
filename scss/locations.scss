@@ -112,3 +112,152 @@ p {
     }
 }
 
+@media screen and (min-width:750px) {
+    .hero {
+        padding: 4.5rem 10.31rem;
+        margin-bottom: 7.5rem;
+        background-image: url(../assets/images/careers-locations-hero-tablet.jpg);
+        text-align: start;
+    }
+
+    .world_map {
+        position: relative;
+        width: fit-content;
+        margin-inline: auto;
+
+        .wrapper {
+            width: fit-content;
+            padding: .5rem 2.5rem;
+            background-color: $yellow;
+            position: absolute;
+            z-index: 10;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width:5px;
+                
+                
+                
+                border-top: 5px solid $yellow;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+
+                
+                
+            }
+
+            &.ny {
+                top: 3rem;
+                left: 8rem
+            }
+
+            &.yokohama {
+                top: 15%;
+                right: 3.7rem;
+            }
+
+            &.jakarta {
+                bottom: 42%;
+                right: 7.5rem;
+            }
+
+            &.london {
+                top: 6%;
+                left: 37%;
+            }
+            
+
+            span {
+                display: block;
+                font-size: .8125rem;
+               
+            }
+        }
+    }
+
+    .contact {
+        padding-inline: 6.125rem;
+        margin-bottom: 7.5rem;
+
+        h2 {
+            font-size: 3rem;
+            line-height: 1;
+            letter-spacing: -2.14px;
+            max-width: 15ch;
+            margin-inline: auto;
+            margin-bottom: 2.5rem;
+
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero {
+        padding: 4.5rem 10.31rem;
+        margin-bottom: 7.5rem;
+        background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
+
+        
+    }
+
+    .world_map {
+        
+        .wrapper {
+
+            span {
+                font-size: 1.5rem;
+            }
+
+            &.ny {
+                top: 17%;
+                left: 15%;
+            }
+
+            &.london {
+                top: 7%;
+                left: 38%;
+            }
+
+            &.yokohama {
+                top: 20%;
+                right: 6rem;
+            }
+
+            &.jakarta {
+                bottom: 40%;
+                right: 11rem;
+            }
+        }
+        
+    }
+    
+    .contact {
+        display: flex;
+        text-align: start;
+        align-items: center;
+        gap: 3rem;
+        justify-content: space-between;
+        padding-inline: 10.31rem;
+
+        .cta {
+            text-wrap: nowrap;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            max-width: 45ch;
+            margin: 0;
+        }
+    }
+}
